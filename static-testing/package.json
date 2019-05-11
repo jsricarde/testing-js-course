@@ -1,0 +1,35 @@
+{
+  "name": "static-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "lint": "eslint src",
+    "flow": "flow",
+    "format": "npm run prettier -- --write",
+    "prettier": "prettier \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|mdx|graphql|vue)\"",
+    "validate": "npm run lint && npm run prettier -- --list-different && npm run flow",
+    "precommit": "lint-staged && npm run flow"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsricarde/testing-js-course.git"
+  },
+  "author": "jsricarde",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jsricarde/testing-js-course/issues"
+  },
+  "homepage": "https://github.com/jsricarde/testing-js-course#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.1.0",
+    "flow-bin": "^0.96.0",
+    "husky": "^2.2.0",
+    "lint-staged": "^8.1.6",
+    "prettier": "^1.16.4"
+  }
+}
