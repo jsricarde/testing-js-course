@@ -1,8 +1,10 @@
-import 'react-testing-library/cleanup-after-each'
 import React from 'react'
 import {render} from 'react-testing-library'
 import Calculator from '../calculator'
+import loadable from 'react-loadable'
 
-test('renders', () => {
-  render(<Calculator />)
-})
+test('renders', async () => {
+    await loadable.preloadAll()
+    const {container, debug} = render(<Calculator />)
+    debug(container)
+});
