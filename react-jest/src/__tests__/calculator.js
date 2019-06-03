@@ -6,5 +6,5 @@ import loadable from 'react-loadable'
 test('renders', async () => {
     await loadable.preloadAll()
     const {container, debug} = render(<Calculator />)
-    debug(container)
+    // debug(container)
 });

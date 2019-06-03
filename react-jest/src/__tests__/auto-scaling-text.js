@@ -1,6 +1,6 @@
 import React from 'react'
 import {render} from 'react-testing-library'
-import AutoScalingText from '../auto-scaling-text'
+import AutoScalingText from '../shared/auto-scaling-text'
 
 test('renders', () => {
   const {container} = render(<AutoScalingText />)
